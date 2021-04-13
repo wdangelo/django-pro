@@ -16,9 +16,10 @@ jobs:
         with:
           python-version: 3.8
       - name: Instalar Dependências
-        run:
+        run: |
           pip install pipenv
-          pipenv sync --dev
+          sync pipenv --dev
       - name: Rodar testes automaticos
-        run:
+        run: |
           pipenv run pytest webdev
+          sync pipenv --dev
